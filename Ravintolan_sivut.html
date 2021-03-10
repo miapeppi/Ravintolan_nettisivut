@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <title>Kippis</title>
+  <link rel="icon" href="kuvat/logo.jpg" ype="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Megrim&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Megrim&family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<!--
+  Kurssityönä laadittu tehtävä
+-->
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <a class="navbar-brand" href="#alku">
+      <img class="logo" src="kuvat/logo.jpg" alt="logo jossa on vaaleanpunaisia ruusuja keltaisissa pulloissa">
+    </a>
+    <a class="navbar-brand" href="#ravintola">Kippis</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#alku">Etusivu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ravintola">Ravintola</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#menu">Sesongin herkut</a>
+            <a class="dropdown-item" href="#menu">Jaettavat annokset</a>
+            <a class="dropdown-item" href="#menu">Jälkiruuat</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#accordion">Talon drinkit</a>
+            <a class="dropdown-item" href="#accordion">Viinilista</a>
+            <a class="dropdown-item" href="#accordion">Olutlista</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#drinkkivideot">Drinkit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#yhteystiedot">Ota yhteyttä</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#poytavaraus">Pöytävaraukset</a>
+        </li>
+      </ul>
+      <!--
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Etsi sivustolta" aria-label="Search">
+        <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Etsi</button>
+      </form>
+    -->
+    </div>
+  </nav>
+
+  <div id="alku" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#alku" data-slide-to="0" class="active"></li>
+      <li data-target="#alku" data-slide-to="1"></li>
+      <li data-target="#alku" data-slide-to="2"></li>
+      <li data-target="#alku" data-slide-to="3"></li>
+    </ul>
+      
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="kuvat/salaatti_web.jpg" alt="Granaattiomenasalaatti pähkinöillä">
+        <div class="carousel-caption">
+          <h3>Granaattiomenasalaatti</h3>
+          <p>Ikuinen klassikkomme!</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="kuvat/keitto_web.jpg" alt="Tomaattinen rapukeitto">
+        <div class="carousel-caption">
+          <h3>Rapukeitto</h3>
+          <p>Täydellinen viileisiin talvi-iltoihin</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="kuvat/juustot_web.jpg" alt="Juustolajitelma, viinirypäleitä ja rosmariinia">
+        <div class="carousel-caption">
+          <h3>Talon juustolautanen</h3>
+          <p>Laadukas valikoima vaihtuvia juustoja</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="kuvat/piirakat_web.jpg" alt="Marjapiirakoita">
+        <div class="carousel-caption">
+          <h3>Marjapiirakka</h3>
+          <p>Sopii hyvin jaettavaksi</p>
+        </div>
+      </div>
+    </div>
+        
+    <a class="carousel-control-prev" href="#alku" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#alku" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  
+  <div class="container-fluid" id="ravintola">
+    <div class="row">
+      <div class="col-lg-4 align-self-center vasen">
+        <img src="kuvat/asetelma_web.jpg" alt="Asetelma erilasia juustoja ja hedelmiä">
+      </div>
+      <div class="col-lg-4 esittely">
+        <h1>Aika skoolata!</h1><br>
+        <p>Tervetuloa nauttimaan kauden herkkuja Kippikseen! Ravintolasta löydät kausittain vaihtuvan menun, sekä laajan viini- ja olutvalikoiman. <br><br>
+            Fredrikinkatu 26, 00100 Helsinki<br><br>
+            Aukioloajat:<br>
+            SU - TO 16:00 - 21:00<br>
+            PE - LA 16:00 - 23:00
+        </p>
+      </div>
+      <div class="col-lg-4 align-self-center oikea">
+        <img src="kuvat/juomat_web.jpg" alt="Drinkkejä ja ananas">
+      </div>
+    </div>
+  </div>
+
+  <div class="card-group" id="menu">
+    <div class="card kortti">
+      <img src="kuvat/viikunajuoma_web.jpg" class="card-img-top" alt="Kelta-valkoinen drinkki jonka päällä on viikunoita">
+      <div class="card-body">
+        <h2>Talon drinkit</h2>
+        <p>Käsityönä valmistettuja sesongittain vaihtuvia drinkkejä jokaiseen makuun! Saatavilla myös alkoholittomana.</p>
+      </div>
+    </div>
+
+    <div class="card kortti">
+      <img src="kuvat/viikunalautanen_web.jpg" class="card-img-top" alt="Asetelma viikunoita, viinirypäleitä sekä erilaisia leikkeleitä">
+      <div class="card-body">
+        <h2>Sesongin herkut</h2>
+        <p>Parhaista kauden raaka-aineista valmistettuja herkullisia annoksia. Saatavilla useita eri liha-, kala- sekä kasvivaihtoehtoja.</p>
+      </div>
+    </div>
+
+    <div class="card kortti">
+      <img src="kuvat/luumulautanen_web.jpg" class="card-img-top" alt="Asetelmal luumuja, suolakeksejä sekä juustoja">
+      <div class="card-body">
+        <h2>Jaettavat annokset</h2>
+        <p>Jaettavista annoksista riittää herkkuja koko pöytäseurueelle! Voitte valita valmiista kokonaisuuksista tai kasata täysin oman!</p>
+      </div>
+    </div>
+
+    <div class="card kortti">
+      <img src="kuvat/vohveli_web.jpg" class="card-img-top" alt="Vohveli tomusokerilla ja marjoilla">
+      <div class="card-body">
+        <h2>Makeat jälkiruuat</h2>
+        <p>Jälkiruoka kruunaa illallisen! Laaja valikoima suussa sulavia vaihtoehtoja.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="accordion">
+    <div class="card haitarikortti">
+      <div class="card-header" id="talonDrinkit">
+        <h2>
+          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Talon drinkit
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="talonDrinkit" data-parent="#accordion">
+        <div class="row haitari">
+          <div class="card-body col-lg-8">
+            <h2>Viikunbellini</h2>
+            <p>Viikunabellini on ihastuttava muunnos klassikkodrinkistä.</p><br>
+            <h2>Hugo</h2>
+            <p>Seljankukkamehusta, proseccosta ja mintusta sekoitettu drinkki.</p><br>
+            <h2>Roses for my Rose</h2>
+            <p>Herkän vaaleanpunaisessa ruusudrinkissä yhdistyvät raikas raparperi, karpalo ja roseeviini.</p><br>
+            <h2>Caribbean Snow</h2>
+            <p>Passionhedelmä yhdistettynä kanelin aromeihin tuo tähän lämpimään juomaan Karibian makumaailmaa.</p><br>
+            <h2>Red Root</h2>
+            <p>Raikas punajuuri-prosecco-drinkki juhlistaa syksyä.</p>
+          </div>
+          <div class="haitarikuva col-lg-4">
+            <img src="kuvat/puolukkajuoma_web.jpg" alt="Punaisia ja keltaisia juomia, joissa puolukoita ja rosmariinia">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="viinit">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Viinilista
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="viinit" data-parent="#accordion">
+        <div class="row haitari">
+          <div class="card-body col-lg-8">
+            <h2>Azueira O Mâgnanimo D. João V 2017</h2>
+            <p>Pehmeät ja hedelmäiset punaviinimaailman moniottelijat sopivat erityisen hyvin seurusteluun sekä jaettavien annosten kanssa.</p><br>
+            <h2>Pelissero Barbera d'Alba Tulin 2012</h2>
+            <p>Vivahteikkaat ja kehittyneet punaviinit maistuvat rustiikkisten liharuokien kanssa. Ne ovat myös hyviä juustoviinejä ja omiaan nautiskeluun.</p><br>
+            <h2>Louis Chenu Pere & Filles Savigny Vieilles Vignes 2017</h2>
+            <p>Marjaisat ja raikkaat punaviinit sopivat luontevasti pastojen, kasvis- ja kanaruokien ja sisäelinten kuten maksan, mutta myös kalaruokien kanssa.</p><br>
+            <h2>Château de Rochemorin Blanc 2016</h2>
+            <p>Vivahteikkaat valkoviinit viihtyvät niin kala- ja äyriäispäivällisillä kuin vähän voimakkaampienkin makujen seurassa.</p><br>
+            <h2>Gini Contrada Salvarenza Vecchie Vigne 2016</h2>
+            <p>Hedelmäiset valkoviinit ovat osuvia valintoja esimerkiksi pikkusuolaisten alkupalojen, pastojen sekä kala- ja äyriäisherkkujen kavereiksi.</p>
+          </div>
+          <div class="haitarikuva col-lg-4">
+            <img src="kuvat/viini_web.jpg" alt="Viinipullo, kaatunut viinilasi ja hedelmiä">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="oluet">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Olutlista
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="oluet" data-parent="#accordion">
+        <div class="row haitari">
+          <div class="card-body col-lg-8">
+            <h2>Stadin Panimon New England Apricot IPA</h2>
+            <p>Kokeile IPAn kanssa esimerkiksi valkosipulilla maustettuja lampaankyljyksiä tai sinihomejuustoa.</p><br>
+            <h2>Mustan Virran Pistolekors Porter</h2>
+            <p>Kokeile portterin kanssa esimerkiksi savulammasta, pippurijuustoa tai tummaa suklaakakkua.</p><br>          
+            <h2>Honkavuoren Heili Vehnäolut</h2>
+            <p>Kokeile vehnäoluen kanssa esimerkiksi lämminsavustettua lohta, vuohenjuustosalaattia tai kermaista kala- tai äyriäiskeittoa.</p><br>
+            <h2>Loimaan Hop Hop DIPL</h2>
+            <p>Kokeile lagerin kanssa esimerkiksi vaaleita silli- ja silakkaherkkuja, makkara-hapankaalipataa tai voimakkaasti maustettuja ruokia.</p><br>
+            <h2>Hailuodon Luomu Pilsneri</h2>
+            <p>Kokeile pilsin kanssa esimerkiksi äyriäisherkkuja, yrttisiä raakamakkaroita tai kalaruokia.</p>
+          </div>
+          <div class="haitarikuva col-lg-4">
+            <img src="kuvat/oluet_web.jpg" alt="Olutpulloja coolerissa jääpalojen keskellä">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid videot" id="drinkkivideot">
+    <ul class="nav nav-tabs nav-fill" id="videot">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home">Raikas juuriolut Bourbon drinkki</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1">Savuinen Gin drinkki</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu2">Virvoittava Daikon lotus drinkki</a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active container" id="home">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ore2GcXFIv4"></iframe>
+        </div>
+      </div>
+      <div class="tab-pane container" id="menu1">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H7qJWMKTqpQ"></iframe>
+        </div>
+      </div>
+      <div class="tab-pane container" id="menu2">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0CJAsVjeioM"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid taulukko" id="yhteystiedot">
+    <h4>Ota yhteyttä</h4>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Osastot</th>
+            <th>Puhelinnumero</th>
+            <th>Sähköpostiosoite</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pöytävaraukset</td>
+            <td>050 - 123 4567</td>
+            <td>varaukset@kippis.com</td>
+          </tr>
+          <tr>
+            <td>Ryhmävaraukset</td>
+            <td>050 - 345 6789</td>
+            <td>ryhmat@kippis.com</td>
+          </tr>
+          <tr>
+            <td>Ravintola</td>
+            <td>050 - 765 4321</td>
+            <td>ravintola@kippis.com</td>
+          </tr>
+          <tr>
+            <td>Drinkkibaari</td>
+            <td>050 - 987 6543</td>
+            <td>baari@kippis.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="poytavaraus">
+    <h4>Pöytävaraukset</h4>
+    <form onsubmit="return false">
+      <div class="form-group row">
+        <label for="etunimi" class="col-sm-2 col-form-label">Etunimi:</label>
+        <div class="col-sm-10">
+          <input type="text" id="etunimi" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="sukunimi" class="col-sm-2 col-form-label">Sukunimi:</label>
+        <div class="col-sm-10">
+          <input type="text" id="sukunimi" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="sposti" class="col-sm-2 col-form-label">Sähköposti:</label>
+        <div class="col-sm-10">
+          <input type="email" id="sposti" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="numero" class="col-sm-2 col-form-label">Puhelin:</label>
+        <div class="col-sm-10">
+          <input type="tel" id="numero" pattern="\+?[0-9 () \-]+">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="paiva" class="col-sm-2 col-form-label">Päivämäärä:</label>
+        <div class="col-sm-10">
+          <input type="date" id="paiva" min="2021-02-01" max=2030-01-01 required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="aika" class="col-sm-2 col-form-label">Kellonaika:</label>
+        <div class="col-sm-10">
+          <select name="aika" id="aika" required>
+            <option value="16.00">16.00</option>
+            <option value="16.30">16.30</option>
+            <option value="17.00">17.00</option>
+            <option value="17.30">17.30</option>
+            <option value="18.00">18.00</option>
+            <option value="18.30">18.30</option>
+            <option value="19.00">19.00</option>
+            <option value="19.30">19.30</option>
+            <option value="20.00">20.00</option>
+            <option value="20.30">20.30</option>
+            <option value="21.00">21.00</option>
+            <option value="21.30">21.30</option>
+            <option value="22.00">22.00</option>
+          </select>
+        </div>
+      </div>
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Pöytäseurue:</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="pari" name="koko" value="1 - 2" checked required>
+              <label class="form-check-label" for="pari">1 - 2 henkilöä</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="pieni" name="koko" value="3 - 5">
+              <label class="form-check-label" for="pieni">3 - 5 henkilöä</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="medium" name="koko" value="6 - 10">
+              <label class="form-check-label" for="medium">6 - 10 henkilöä</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="suuri" name="koko" value="Yli 10">
+              <label class="form-check-label" for="suuri">Yli 10 henkilöä</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group row">
+        <legend class="col-form-label col-sm-2 pt-0">Valmiiksi katettu:</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="alkumalja" name="valmiiksi" value="alkumaljat">
+            <label class="form-check-label" for="alkumalja">Alkumaljat</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="leipa" name="valmiiksi" value="tuoretta leipää">
+            <label class="form-check-label" for="leipa">Tuoretta leipää</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="salaatti" name="valmiiksi" value="alkusalaatti">
+            <label class="form-check-label" for="salaatti">Alkusalaatti</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="muuta" class="col-sm-2 col-form-label">Muuta:</label>
+        <div class="col-sm-10">
+          <textarea id="muuta" rows="2" cols="70" placeholder="Muita toiveitanne varaukseen liittyen"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-10">
+          <input type="submit" value="Lähetä" onclick="laheta()">
+          <input type="reset" value="Tyhjennä">
+        </div>
+      </div>
+    </form>
+
+    <!--
+    <form onsubmit="return false">
+      <label for="nimi">Nimi: </label>
+      <input type="text" id="nimi" required><br>
+      <label for="sposti">Sähköposti: </label>
+      <input type="email" id="sposti" required><br>
+      <label for="numero">Puhelin: </label>
+      <input type="tel" id="numero" pattern="\+?[0-9 () \-]+"><br>
+      <label for="paiva">Päivämäärä: </label>
+      <input type="date" id="paiva" min="2021-02-01" max=2030-01-01><br><br>
+      <label for="aika">Kellonaika: </label>
+      <select name="aika" id="aika">
+        <option value="16.00">16.00</option>
+        <option value="16.30">16.30</option>
+        <option value="17.00">17.00</option>
+        <option value="17.30">17.30</option>
+        <option value="18.00">18.00</option>
+        <option value="18.30">18.30</option>
+        <option value="19.00">19.00</option>
+        <option value="19.30">19.30</option>
+        <option value="20.00">20.00</option>
+        <option value="20.30">20.30</option>
+        <option value="21.00">21.00</option>
+        <option value="21.30">21.30</option>
+        <option value="22.00">22.00</option>
+      </select><br>
+
+      <p>Pöytäseurueen koko:</p>
+      <input type="radio" id="pari" name="koko" value="1 - 2" required>
+      <label for="pari">1 - 2 henkilöä</label><br>
+      <input type="radio" id="pieni" name="koko" value="3 - 5">
+      <label for="pieni">3 - 5 henkilöä</label><br>
+      <input type="radio" id="medium" name="koko" value="6 - 10">
+      <label for="medium">6 - 10 henkilöä</label><br>
+      <input type="radio" id="suuri" name="koko" value="Yli 10">
+      <label for="suuri">Yli 10 henkilöä</label><br><br>
+
+      <p>Haluamme pöytään valmiikis odottamaan:</p>
+      <input type="checkbox" id="alkumalja" name="valmiiksi" value="alkumaljat">
+      <label for="alkumalja"> Alkumaljat</label><br>
+      <input type="checkbox" id="leipa" name="valmiiksi" value="tuoretta leipää">
+      <label for="leipa"> Tuoretta leipää</label><br>
+      <input type="checkbox" id="salaatti" name="valmiiksi" value="alkusalaatin">
+      <label for="salaatti"> Alkusalaatin</label><br>
+      
+      <label for="muuta">Muuta: </label>
+      <textarea id="muuta" rows="2" cols="100" placeholder="Muita toiveitanne varaukseen liittyen"></textarea><br>
+      <input type="submit" value="Lähetä" onclick="laheta()">
+      <input type="reset" value="Tyhjennä">
+    </form>
+  -->
+  </div>
+
+  <div id="tiedot">
+    
+  </div>
+
+  <footer>
+    <div class="container-fluid" id="footer">
+      <div class="row">
+        <div class="col-sm-7">
+          <h1>Kippis</h1>
+          <p>Fredrikinkatu 26, 00100 Helsinki</p>
+        </div>
+        <div class="col-sm-5">
+          <p style="text-align: end">
+              Aukioloajat:<br>
+              SU - TO 16:00 - 21:00<br>
+              PE - LA 16:00 - 23:00
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function laheta() {
+      var etunimi = document.getElementById("etunimi").value;
+      var sukunimi = document.getElementById("sukunimi").value;
+      var osoite = document.getElementById("sposti").value;
+      var puhelin = document.getElementById("numero").value;
+      var paiva = document.getElementById("paiva").value;
+      var muuta = document.getElementById("muuta").value;
+      var radios = document.getElementsByName("koko");
+      var poytaseurue = "";
+      var boksit = document.getElementsByName("valmiiksi");
+      var valmiiksi = "";
+      var x = document.getElementById("aika").selectedIndex;
+      var y = document.getElementById("aika").options;
+      var aika = y[x].text;
+
+      for(var i = 0, length = radios.length; i < length; i++) {
+        if(radios[i].checked) {
+          poytaseurue = radios[i].value;
+          break;
+        }
+      }
+
+      for(var i = 0, length = boksit.length; i < length; i++) {
+        if(boksit[i].checked) {
+          valmiiksi = valmiiksi + boksit[i].value + ", ";
+        }
+      }
+
+      document.getElementById("tiedot").innerHTML = 
+      "<h5>Kiitos pöytävarauksesta " + etunimi + "!</h5><p>Varausvahvistus on lähetetty sähköpostiosoitteeseen " + osoite + ".<br>" +
+      "<br>Varauksentiedot:" +
+      "<br>Varaaja: " + etunimi + " " + sukunimi +
+      "<br>Puhelinnumero: " + puhelin + 
+      "<br>Sähköpostiosoite: " + osoite +
+      "<br>Varauksen ajankohta: " + paiva + 
+      "<br>Kellonaika: " + aika + " (varaus on voimassa kaksi tuntia sen alkamisesta)" +
+      "<br>Pöytäseurueen koko: " + poytaseurue + " henkilöä" +
+      "<br>Pöydässä valmiiksi: " + valmiiksi +
+      "<br>Muita toiveita varaukseen liittyen: " + muuta + "</p>";
+    }
+
+    $(document).ready(function(){
+      $("#myCarousel").carousel({interval: 4000, pause: "hover", keyboard:true});
+                    
+      $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+      });
+      $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+      });
+      $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+      });
+      $(".item4").click(function(){
+        $("#myCarousel").carousel(3);
+      });
+            
+      $(".carousel-control-prev").click(function(){
+        $("#myCarousel").carousel("prev");
+      });
+      $(".carousel-control-next").click(function(){
+        $("#myCarousel").carousel("next");
+      });
+
+      $('body').css('padding-top', $('.navbar').outerHeight());
+    });
+  </script>
+
+</body>
+</html>
